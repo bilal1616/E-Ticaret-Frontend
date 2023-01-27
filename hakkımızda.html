@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Ticaret Sitem</title>
+    <style>
+        
+        body {
+            font-family: Arial;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Nav Bar Başlangıç */
+        .head_nav {
+            height: 70px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head_nav a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 700;
+        }
+
+        .head_nav ul {
+            margin: 0%;
+        }
+
+        .right {
+            padding-left: 0px;
+        }
+        
+        
+        #inner_menu, #inner_menu1, #inner_menu2 {
+            display: flex;
+            list-style: none;
+        }
+
+        #inner_menu > li, #inner_menu1 > li, #inner_menu2 > li{
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            
+        #inner_menu > li, #inner_menu2 > li {
+            margin: 2px;
+            padding: 11px;
+        }
+
+        #inner_menu1 > li {
+            margin: 2px;
+            padding: 11px;
+        }
+
+        form {
+            background-color: whitesmoke;
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        input {
+            all: unset;
+            font: 16px system-ui;
+            color: black;
+            border: 2px solid black;
+            border-radius: 7px 7px;
+            height: 50%;
+            width: 100%;
+            padding: 6px 10px;
+        }
+
+        ::placeholder {
+            color: lightslategray;
+            opacity: 1.8; 
+        }
+
+        .buton {
+            border: 2px solid black;
+            border-radius:  7px 7px;
+            background-color: whitesmoke;
+            color: black;
+            cursor: pointer;
+            width: 25%;
+            height: 36px;
+        }
+
+        #anasayfa, #hakkımızda, #iletisim {
+            color: black;
+        }
+
+        #logo {
+            float: left;
+            padding: 0 1px;
+            margin: auto;
+        }
+
+        #giris, #kayıtol {
+            color: black;
+        }
+
+        #inner_menu > li:hover {
+            background-color: gainsboro;
+        }
+
+        #indirim {
+            margin: 8px;
+            color: black;
+        }
+
+        #giris{
+            border-left: 3px solid black;
+            padding-left: 8px;
+        }
+
+        #kayıtol {
+            border-left: 3px solid black;
+            padding-left: 8px;
+        }
+
+        #sepet {
+            padding-left: 5px;
+            color: black;
+        }
+        /* Nav Bar Bitiş */    
+
+        body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.5%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            margin: 1px;
+            padding: 35px;
+            text-align: center;
+            background-color: lightgrey;
+            color: black;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        .title {
+            color: lightgray;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+        }
+
+        /*  Footer Başlangıç */
+        
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: whitesmoke;
+                
+        }
+        
+        .footerMenu{
+            width: 100%;
+            height: 320px;
+            display: flex;
+            align-items: center;
+                
+        }
+        
+        .footerLeft {
+            width: 65%;
+            height: 280px;
+            display: flex;
+            border-right: 1px solid black;
+        }
+
+        .footerRight{
+            display: flex;
+            width: 40%;
+            height: 280px;
+            justify-content: start;
+        }
+        
+        .footerRightContent{
+            padding-left: 37%;
+        }
+        
+        .footerLeft1, .footerLeft2, .footerLeft3{
+            width: 33%;
+            height: 280px;
+            line-height: 25px;
+            letter-spacing: 0.6px;
+                
+        }
+            
+        .footer ul{
+                
+        list-style: none;
+        font-size: 15px;
+            
+        }
+            
+        .footerLeft p{
+            width: 100%;
+            padding-left: 25px;
+            font-size: 21px;
+            font-weight: 800;
+        }
+        
+        .footer a{
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footerRight p{
+            font-size: 32px;
+            padding-left: 17px;
+            font-size: 21px;
+            font-weight: 700;
+            color: black;
+        }
+        
+        .footerRightContent > ul > li > a > i{
+            padding-left: 0 5px;
+            font-size: 23px;
+        }
+        
+        .footerRightContent > ul > li > a {
+            font-size: 23px;
+                
+        }
+        
+        /*  Footer Bitiş */
+    </style>
+</head>
+<body>
+    
+    <nav class="head_nav">
+        <div class="right">
+            <ul id="inner_menu">
+                <img id="logo" src="https://www.bistil.com/Uploads/EditorUploads/1111111.png"/>
+                <li><i class="material-icons">home</i><a id="anasayfa" href="proje.html">Anasayfa</a></li>
+                <li><i class="material-icons">description</i><a id="hakkımızda" href="hakkımızda.html" target="_blank">Hakkımızda</a></li>
+                <li><i class="material-icons">phone</i><a id="iletisim" href="iletisim.html" target="_blank">İletişim</a></li>
+                <li><i class="material-icons">shopping_basket</i><a id="sepet" href="proje.html">Sepetim</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <ul id="inner_menu2">
+                <form id="form" role="search">
+                    <input type="search" id="query" name="q"
+                     placeholder="Arama"
+                     aria-label="Site içeriğinde arama yapın">
+                    <button class="buton">Ara</button>
+                </form>
+            </ul>
+        </div>
+        <div class="left">
+            <ul id="inner_menu1">
+                <li><a id="indirim" href="https://www.bistil.com/indirimdekiler" target="_blank">İndirim</a><i class="material-icons">sell</i></li> 
+                <li><a id="kayıtol" href="giris.html" target="_blank">ÜYE OL</a><i class="material-icons">how_to_reg</i></li>
+                <li><a id="giris" href="giris.html" target="_blank">ÜYE GİRİŞİ</a><i class="material-icons">login</i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <h1>Hakkımızda</h1>
+        <p><h2>"Stilteks Ve Bistil Hakkında"</h2></p>
+        <p><h3>STİLTEKS %100 MÜŞTERİ MEMNUNİYETİNİ HEDEFLEMEKTEDİR.</h3></p>
+        <p><h3>"Şirket Profili"
+          Firmamız 2010 yılından bu yana son teknoloji elektronik Çorap Örme makinaları ile Seçkin Bebe Markalarına hizmet vermektedir. Kaliteden taviz vermeyen firmamız bebe ve çocuk sağlığına son derece önem vermektedir. Firmamız sektördeki deneyimi ve birikimi ile istikrarlı bir biçimde yoluna devam etmektedir.
+          Stilteks olarak, modern üretim teknolojisine sahip örgü, konfeksiyon, yıkama ve forma ile Seçkin Bebe ve Çocuk Markalarına üretim yapmaktayız.
+          Estetik ve işlevselliği en doğru noktada buluşturan tasarım anlayışımız ile çağı yakalamış modern tasarımlar üretiyoruz . İnsan ve fiziksel çevrenin moda ile uyumunun gerekliliğinin farkındayız ve bunu yansıtmak için sürekli kendimizi geliştiriyoruz.
+          Son teknoloji ile donatılmış olan Çorap Örme Makinalarımız kaliteyi ön planda tutmak kaydıyla üretim yapıyoruz.
+          Yıkama bölümünde, tüm çoraplarımıza Bebe ve Çocuk sağlına önem verilerek sanforize ederek çekmezlik özelliği veriliyoruz.</h3></p>
+        <p><h3>BiStil: 2020 Yılından beri BiStil Markası olarak BiOrganik ve Organik Ürünleri E-Ticaret Alanında Pazarlamaktadır.</h3></p>
+    </div>
+      
+      <h2 style="text-align:center">Yöneticiler</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="icons8-avatar-64.png" alt="Kadri" style="width:50%">
+            <div class="container">
+              <h2>Kadri GÖK</h2>
+              <p class="title">CEO & Genel Müdür</p>
+              <p>BiStil Marka Genel Müdürü.</p>
+              <p>Mezun Olduğu Bölüm: "Muhasebe"</p>
+              <p>kadri-gok@hotmail.com</p>
+              <p>Telefon Numarası:05054545454</p>
+              <p><button class="button">İletişim</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="icons8-avatar-64.png" alt="Eslem" style="width:50%">
+            <div class="container">
+              <h2>Eslem GÖNÜL</h2>
+              <p class="title">Satış Müdürü & Sekreter</p>
+              <p>BiStil Marka Satış Müdürü ve Sekreter.</p>
+              <p>Mezun Olduğu Bölümler: "Ziraat Mühendisi & Veteriner"</p>
+              <p>"Marka İletişimi ve Pazarlama"</p>
+              <p>eslemmgok@gmail.com</p>
+              <p>Telefon Numarası:05415429014</p>
+              <p><button class="button">İletişim</button></p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+          <div class="footerMenu">
+              
+              <div class="footerLeft">
+                  
+                  <div class="footerLeft1">
+                      <p>KURUMSAL</p>
+                      <ul>
+                          <li> <a href="hakkımızda.html" target="_blank">Hakkımızda</a></li>
+                          <li> <a target="_blank" href="iletisim.html">Bize Ulaşın</a></li>
+                        
+                      </ul>
+                  </div>
+                  
+                  <div class="footerLeft2">
+                      <p>KATEGORİLER</p>
+                      <ul>
+                          <li> <a target="_blank" href="https://www.bistil.com/anne--bebek">Anne & Bebek</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/kadin1">Kadın</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/erkek">Erkek</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/cocuk">Çocuk</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/corap1">Çorap</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/organik">Organik</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/hediye">Hediye</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footerLeft3">
+                      <p>MÜŞTERİ HİZMETLERİ</p>
+                      <ul>
+                          <li> <a target="_blank" href="iletisim.html">Yardım</a></li>
+                          <li> <a target="_blank" href="proje.html">Sipariş Takip</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/uyelik-sozlesmesi">Üyelik Sözleşmesi</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/kargo-ve-teslimat">Kargo & Teslimat</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/kvkk">KVKK</a></li>
+                          <li> <a target="_blank" href="https://www.bistil.com/kvkk">İptal ve İade Koşulları</a></li>
+                      </ul>
+                  </div>
+
+              </div>
+
+              
+              
+              <div class="footerRight">
+                  <div class="footerRightContent"> 
+                      <p>BİZİ TAKİP EDİN</p>
+                      <ul> 
+                          <li><a href="https://www.facebook.com/pages/category/Shopping---retail/Bistilcom-107373821108658/" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a></li>
+                          <li><a href="https://www.instagram.com/bistilcom/" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a></li>
+                          <li><a href="https://www.amazon.com.tr/Bebek-bistil/s?rh=n%3A12466208031%2Cp_6%3AA23RP24TTRISH9" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/color/48/000000/amazon.png"/></a></li>
+                          <li><a href="https://www.trendyol.com/magaza/bistil-m-485702?sst=0" target="_blank"><img width="40px" height="40px" src="https://patronlarinensesindeyiz.org/wp-content/uploads/2019/09/t0CFAPzZ.jpg"/></a></li>
+                          <li><a href="https://www.hepsiburada.com/magaza/bistil" target="_blank"><img width="40px" height="40px" src="https://seeklogo.com/images/H/hepsiburada-yuvarlak-logo-A7CED79D00-seeklogo.com.png"/></a></li>
+                      </ul>
+                  </div> 
+              </div>
+
+          </div>
+
+      </div>
+  </footer>
+
+</body>
+</html>

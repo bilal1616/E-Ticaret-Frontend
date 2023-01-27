@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Ticaret Sitem</title>
+    <style>
+        
+        body {
+            font-family: Arial;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Nav Bar Başlangıç */
+        .head_nav {
+            height: 70px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head_nav a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .head_nav ul {
+            margin: 0%;
+        }
+
+        #inner_menu, #inner_menu1, #inner_menu2 {
+            display: flex;
+            list-style: none;
+        }
+
+        #inner_menu > li, #inner_menu1 > li, #inner_menu2 > li{
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        #inner_menu > li, #inner_menu2 > li {
+            margin: 12px;
+            padding: 8px;
+        }
+
+        #inner_menu1 > li {
+            margin: 7px;
+            padding: 12px;
+        }
+
+        form {
+            background-color: whitesmoke;
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        input {
+            all: unset;
+            font: 16px system-ui;
+            color: black;
+            border: 2px solid black;
+            border-radius: 7px 7px;
+            height: 50%;
+            width: 100%;
+            padding: 6px 10px;
+        }
+
+        ::placeholder {
+            color: lightslategray;
+            opacity: 1.8; 
+        }
+
+        .buton {
+            border: 2px solid black;
+            border-radius:  7px 7px;
+            background-color: whitesmoke;
+            color: black;
+            cursor: pointer;
+            width: 25%;
+            height: 36px;
+        }
+
+        #anasayfa, #hakkımızda, #iletisim {
+            color: black;
+        }
+
+        #logo {
+            float: left;
+            padding: 0 1px;
+            margin: auto;
+        }
+
+        #giris, #kayıtol {
+            color: black;
+        }
+
+        #inner_menu > li:hover {
+            background-color: gainsboro;
+        }
+
+        #indirim {
+            margin: 8px;
+            color: black;
+        }
+
+        #giris{
+            border-left: 3px solid black;
+            padding-left: 8px;
+        }
+
+        #kayıtol {
+            border-left: 3px solid black;
+            padding-left: 8px;
+        }
+
+        #sepet {
+            padding-left: 5px;
+            color: black;
+        }
+        /* Nav Bar Bitiş */
+
+        /* Dış Div Container Yapısı */
+        .container {
+            margin: 1px;
+            padding: 1px;
+            width: 100%;
+        }
+
+        /*İç Div Sarıcı Wrapper Yapısı */
+        .wrapper {
+            width: 90%;
+            margin: auto;
+        }
+
+        
+        .firsat_banner{
+            margin: auto;
+            width: 90%;
+            height: 265px;
+            border: 3px solid whitesmoke;
+        }
+
+        .img_banner > img,
+         .firsat_banner > img, 
+         .card_img > img,
+         .advertising_inner > img,
+         .advertising_inner_2 > img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            padding: 50px;
+        }
+        /* Wrapper Bitiş */
+        
+        /* KART YAPIMI BÖLÜMÜ */
+        .cards {
+            width: 300px;
+            height: 440px;
+            padding: 10px;
+            background-color: rgb(243, 243, 243);
+            border: 3px double gray;
+            border-radius: 20px 40px;
+        }
+
+        .cards_1 {
+            width: 300px;
+            height: 440px;
+            padding: 10px;
+            background-color: rgb(243, 243, 243);
+            border: 3px double gray;
+            border-radius: 20px 40px;
+        }
+        
+        .card_img {
+            width: 278px;
+            height: 200px;
+        }
+        
+        .card_img > img,
+        .advertising_inner > img, .advertising2 > img {
+            border-radius: 20px 40px;
+        }
+       
+        .card_rate {
+           margin-top: 6px;
+        }
+
+        .card_rate_1 {
+            margin-top: 10px;
+        }
+       
+        .card_explanation {
+           margin-top: 9px;
+        }
+       
+       .card_explanation > p,
+       .card_explanation > h4  {
+           margin: 5px 0;
+        }
+       
+       .price {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding-top: 20px;
+       }
+       #oldPrice {
+           color: red;
+       }
+       #newPrice {
+           font-size: 20px;
+           color: darkblue;
+       }
+
+       .card_button > button {
+           padding: 2px;
+           margin: 0;
+           border-radius: 7px;
+           background-color: lightslategray;
+           color: azure;
+           font-weight: 500;
+           
+       }
+       /* KART YAPIMI BÖLÜMÜ BİTİŞ */
+
+       /* inner content kısmı */
+       .innerContent {
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+
+       /* ORTA DIV YAPIMI */
+       .orta {
+           margin: 50px 0;
+       }
+
+       .son{
+           margin: 50px 0;
+       }
+       
+       /* Reklam Kartları Başlangıç */
+       .advertising, .advertising2 {
+           width: 700px;
+           height: 420px;
+           border: 2px double gray;
+           border-radius: 20px 40px;
+           padding: 30px;
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       
+       .advertising_inner {
+           width: 45%;
+           height: 390px;
+           border: 2px solid black;
+           border-radius: 20px 40px;
+       }
+       
+       .advertising2 {
+           width: 350px;
+           height: 420px;
+       }
+       
+       .advertising_inner_2 {
+           width: 90%;
+       }
+       /* Reklam Kartları Bitiş */
+
+        /*  Footer Başlangıç */
+    
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: whitesmoke;
+            
+        }
+        .footerMenu{
+            width: 100%;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .footerLeft {
+            width: 65%;
+            height: 280px;
+            display: flex;
+            border-right: 1px solid black;
+        }
+
+        .footerRight{
+            display: flex;
+            width: 40%;
+            height: 300px;
+            justify-content: start;
+        }
+        .footerRightContent{
+            padding-left: 35%;
+        }
+        
+        .footerLeft1, .footerLeft2, .footerLeft3{
+            width: 33%;
+            height: 280px;
+            line-height: 25px;
+            letter-spacing: 0.6px;
+            
+        }
+        
+        .footer ul{
+            
+            list-style: none;
+            font-size: 15px;
+        
+        }
+        
+        .footerLeft p{
+            width: 100%;
+            padding-left: 30px;
+            font-size: 21px;
+            font-weight: 800;
+        }
+        .footer a{
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+        }
+        .footerRight p{
+            font-size: 21px;
+            padding-left: 21px;
+            font-weight: 800;
+            margin-top: 31px;
+            color: black;
+        }
+        .footerRightContent > ul > li > a > i{
+            padding-left: 0 5px;
+            font-size: 24px;
+        }
+        .footerRightContent > ul > li > a {
+            font-size: 24px;
+        }
+
+        /*  Footer Bitiş */
+
+        /* Banner Başlangıç */
+        .banner_wrapper {
+            width: 100%;
+            height: 350px;
+            background-image: url(https://www.bistil.com/Uploads/SayfaTasarim/Sayfa8/yeni-sezon-09ef.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner_wrapper_1 {
+            width: 100%;
+            height: 525px;
+            background-image: url(https://www.bistil.com/Uploads/SayfaTasarim/Sayfa8/Yenisezon-3f64.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        /* Banner Bitiş */
+
+
+
+    </style>
+</head>
+<body>
+    
+    <nav class="head_nav">
+        <div class="right">
+            <ul id="inner_menu">
+                <img id="logo" src="https://www.bistil.com/Uploads/EditorUploads/1111111.png"/>
+                <li><i class="material-icons">home</i><a id="anasayfa" href="proje.html">Anasayfa</a></li>
+                <li><i class="material-icons">description</i><a id="hakkımızda" href="hakkımızda.html" target="_blank">Hakkımızda</a></li>
+                <li><i class="material-icons">phone</i><a id="iletisim" href="iletişim.html" target="_blank">İletişim</a></li>
+                <li><i class="material-icons">shopping_basket</i><a id="sepet" href="proje.html">Sepetim</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <ul id="inner_menu2">
+                <form id="form" role="search">
+                    <input type="search" id="query" name="q"
+                     placeholder="Arama"
+                     aria-label="Site içeriğinde arama yapın">
+                    <button class="buton">Ara</button>
+                </form>
+            </ul>
+        </div>
+        <div class="left">
+            <ul id="inner_menu1">
+                <li><a id="indirim" href="https://www.bistil.com/indirimdekiler" target="_blank">İndirim</a><i class="material-icons">sell</i></li> 
+                <li><a id="kayıtol" href="kayıt.html" target="_blank">ÜYE OL</a><i class="material-icons">how_to_reg</i></li>
+                <li><a id="giris" href="giriş.html" target="_blank">ÜYE GİRİŞİ</a><i class="material-icons">login</i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="banner_wrapper">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+            <!-- CONTENT İCERİĞİ -->
+            <div class="content">
+                <!-- BASLANGIC DIVI BASLANGICI -->
+                <div class="innerContent baslangic">
+                    <!-- KART GRUPLARI -->
+                    <div class="cards"> 
+                        <div class="card_img">
+                            <img src="mobilya.jpg" alt="">
+                        </div>
+                        <div class="card_content">
+                            <div class="card_rate">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <small>Beğeni</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">19</span>)</p>
+                                <h4>Bibaby Kız Bebek Cute Cat Saç Örgü 7li Mobilya Uyku Seti</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><del id="oldPrice">623,62</del>TL <span id="newPrice">588,97</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- KART GRUPLARI -->
+                    <div class="cards"> 
+                        <div class="card_img">
+                            <img src="battaniye.jpg" alt="">
+                        </div>
+                        <div class="card_content">
+                            <div class="card_rate">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <small>Beğeni</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">27</span>)</p>
+                                <h4>Bibaby Kız Bebek Be Happy Love Welsoft Battaniye</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><del id="oldPrice">165,66</del>TL <span id="newPrice">154,06</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- KART GRUPLARI -->
+                    <div class="cards"> 
+                        <div class="card_img">
+                            <img src="bornoz.jpg" alt="">
+                        </div>
+                        <div class="card_content">
+                            <div class="card_rate">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <small>Beğeni</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">34</span>)</p>
+                                <h4>Bi Organik Biorganic Kız Bebek Çocuk Unicorn Yaş Bornoz Pembe</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><span id="newPrice">182,08</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <!-- BASLANGIC DİVİ BİSİTİŞİ -->
+
+                <!-- ORTADAKİ DIV BASLANGICI-->
+                <div class="innerContent orta">
+                    <div class="reklamlar">
+                        <div class="advertising">
+                            <div class="advertising_inner">
+                                <img src="elbise.jpg" alt="">
+                            </div>
+                            <div class="advertising_inner">
+                                <img src="elbise1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orta_prod">
+                        <div class="cards"> 
+                            <div class="card_img">
+                                <img src="oyuncak.jpg" alt="">
+                            </div>
+                            <div class="card_content">
+                                <div class="card_rate">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <small>Beğeni</small>
+                                </div>
+                                <div class="card_explanation">
+                                    <i class="material-icons" style="font-size:18px;">comment</i>
+                                    <p>Yorumlar (<span id="comment_count">30</span>)</p>
+                                    <h4>Bitoys Kahverengi Tavşan Oyun Uyku Arkadaşı</h4>
+                                </div>
+                                <div class="price">
+                                    <div class="innerPrice">
+                                        <p><span id="newPrice">135,91</span>TL</p>
+                                    </div>
+                                    <div class="card_button">
+                                        <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ORTADAKİ DİVİN BİTİSi -->
+
+
+                <!-- BİTİŞ DİVİ -->
+                <div class="innerContent bitis">
+                    <div class="cards"> 
+                        <div class="card_img">
+                            <img src="corap.jpg" alt="">
+                        </div>
+                        <div class="card_content">
+                            <div class="card_rate">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                <small>Beğeni</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">36</span>)</p>
+                                <h4>Bi Organik Biorganic Kız Erkek Çocuk Bebek Cats Kedili Kaymaz Soket Uzun 3lü Çorap</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><del id="oldPrice">59,90</del>TL <span id="newPrice">57,32</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reklamlar">
+                        <div class="advertising2">
+                            <div class="advertising_inner_2">
+                                <img src="sepet.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orta_prod">
+                        <div class="cards"> 
+                            <div class="card_img">
+                                <img src="fular.jpg" alt="">
+                            </div>
+                            <div class="card_content">
+                                <div class="card_rate">
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <small>Beğeni</small>
+                                </div>
+                                <div class="card_explanation">
+                                    <i class="material-icons" style="font-size:18px;">comment</i>
+                                    <p>Yorumlar (<span id="comment_count">25</span>)</p>
+                                    <h4>Bi Organik Biorganic Erkek Bebek Travel Zoo Temalı Pamuklu 2li Fular Yeşil Gri</h4>
+                                </div>
+                                <div class="price">
+                                    <div class="innerPrice">
+                                        <p><span id="newPrice">76,41</span>TL</p>
+                                    </div>
+                                    <div class="card_button">
+                                        <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SON DİV BAŞLANGICI -->
+                <div class="innerContent son">
+                    <!-- KART GRUPLARI -->
+                    <div class="cards_1">
+                        <div class="card_img">
+                            <img src="prematüre.jpg" alt="">
+                        </div>
+                        <div class="card_content_1">
+                            <div class="card_rate_1">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <small>BEĞENİ</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">33</span>)</p>
+                                <h4>Biorganic Elegant Panda Kız Bebek Organik Prematüre 4lü Set</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><del id="oldPrice">144,90</del>TL <span id="newPrice">129,90</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- KART GRUPLARI -->
+                    <div class="cards_1">
+                        <div class="card_img">
+                            <img src="çorap.jpg" alt="">
+                        </div>
+                        <div class="card_content_1">
+                            <div class="card_rate_1">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <small>BEĞENİ</small>
+                            </div>
+                            <div class="card_explanation">
+                                <i class="material-icons" style="font-size:18px;">comment</i>
+                                <p>Yorumlar (<span id="comment_count">36</span>)</p>
+                                <h4>Biorganic Kız Erkek Çocuk Organik Derby Derbi Çizgili 4lü Çorap</h4>
+                            </div>
+                            <div class="price">
+                                <div class="innerPrice">
+                                    <p><del id="oldPrice">99,90</del>TL <span id="newPrice">59,90</span>TL</p>
+                                </div>
+                                <div class="card_button">
+                                    <button id="add_prod" type="button"><i style="margin-right: 5px ;" class="material-icons">add_shopping_cart</i>Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+        <div class="banner">
+            <div class="banner_wrapper_1">
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footerMenu">
+                
+                <div class="footerLeft">
+                    
+                    <div class="footerLeft1">
+                        <p>KURUMSAL</p>
+                        <ul>
+                            <li> <a href="hakkımızda.html" target="_blank">Hakkımızda</a></li>
+                            <li> <a target="_blank" href="iletisim.html">Bize Ulaşın</a></li>
+                          
+                        </ul>
+                    </div>
+                    
+                    <div class="footerLeft2">
+                        <p>KATEGORİLER</p>
+                        <ul>
+                            <li> <a target="_blank" href="https://www.bistil.com/anne--bebek">Anne & Bebek</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/kadin1">Kadın</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/erkek">Erkek</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/cocuk">Çocuk</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/corap1">Çorap</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/organik">Organik</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/hediye">Hediye</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footerLeft3">
+                        <p>MÜŞTERİ HİZMETLERİ</p>
+                        <ul>
+                            <li> <a target="_blank" href="iletisim.html">Yardım</a></li>
+                            <li> <a target="_blank" href="proje.html">Sipariş Takip</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/uyelik-sozlesmesi">Üyelik Sözleşmesi</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/kargo-ve-teslimat">Kargo & Teslimat</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/kvkk">KVKK</a></li>
+                            <li> <a target="_blank" href="https://www.bistil.com/kvkk">İptal ve İade Koşulları</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                
+                
+                <div class="footerRight">
+                    <div class="footerRightContent"> 
+                        <p>BİZİ TAKİP EDİN</p>
+                        <ul> 
+                            <li><a href="https://www.facebook.com/pages/category/Shopping---retail/Bistilcom-107373821108658/" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a></li>
+                            <li><a href="https://www.instagram.com/bistilcom/" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a></li>
+                            <li><a href="https://www.amazon.com.tr/Bebek-bistil/s?rh=n%3A12466208031%2Cp_6%3AA23RP24TTRISH9" target="_blank"><img width="38px" height="38px" src="https://img.icons8.com/color/48/000000/amazon.png"/></a></li>
+                            <li><a href="https://www.trendyol.com/magaza/bistil-m-485702?sst=0" target="_blank"><img width="40px" height="40px" src="https://patronlarinensesindeyiz.org/wp-content/uploads/2019/09/t0CFAPzZ.jpg"/></a></li>
+                            <li><a href="https://www.hepsiburada.com/magaza/bistil" target="_blank"><img width="40px" height="40px" src="https://seeklogo.com/images/H/hepsiburada-yuvarlak-logo-A7CED79D00-seeklogo.com.png"/></a></li>
+                        </ul>
+                    </div> 
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+</html>
